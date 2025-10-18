@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PantryPal</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: aquamarine;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: aquamarine;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Page Container */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            min-height: calc(100vh - 140px);
+        }
+        
+        /* Page Styles */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+            }
+            
+            .nav-links li {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">PantryPal</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('step_1')">Step 1</a></li>
+                <li><a href="#" onclick="showPage('step_2')">Step 2</a></li>
+                <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <h1>PantryPal</h1>
+            <p>Tired of staring into a full fridge and feeling like there's nothing to eat? PantryPal is here to help.
+
+</p>
+            
+            <h2>How does it work?</h2>
+            <p>We've created a smart web app that uses the power of computer vision and generative AI to solve the daily dinner dilemma. Simply open PantryPal on your phone, snap a picture of the ingredients in your fridge and pantry, and our technology will instantly identify what you have.
+
+But we don't stop there. PantryPal's AI then becomes your personal chef, generating customized, step-by-step recipes on the spot using only the ingredients it found. No more last-minute grocery runs. It’s the easiest way to fight food waste, save money, and turn your everyday staples into delicious meals.</p>
+            
+            <h2>Get Started</h2>
+            <p>Press this button to get started</p>
+        </div>
+
+        <!-- Step 1 Page -->
+        <div id="step_1" class="page">
+            <h1>Step 1</h1>
+            <p>Upload a clear photograph that shows all items that are present in your refridgerator.</p>
+            
+            <h2>The program</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <!-- Step 2 Page -->
+        <div id="step_2" class="page">
+            <h1>Step 2</h1>
+            <p>Discover the range of services we offer to meet your needs.</p>
+            
+            <h2>Web Development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <h2>Digital Marketing</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+            <h2>Consulting</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+
+        <!-- About Us -->
+        <div id="about" class="page">
+            <h1>About Us</h1>
+            <p>PantryPal Inc. consists of 4 genius individuals: Aarush, Akul, Alvin, Derek. Each participated in this year's SMIC Hackathon, and together have curated the project you see today.</p>
+            
+            <h2>Roles</h2>
+            <p>In this project, each of us dedicated time to coding and creating different aspects of the project. The roles are:</p>
+            
+            <h2>Contact Information</h2>
+            <p>Email: info@example.com<br>Phone: (123) 456-7890</p>
+            
+            <h2>Send Us a Message</h2>
+            <p>Feel free to reach out to us with any questions or concerns. We're here to help!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PantryPal Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
